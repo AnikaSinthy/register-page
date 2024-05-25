@@ -24,3 +24,4 @@ class Locators():
     Password = By.XPATH, '//input[@id="firstpassword"]'
     ConfirmPassword = By.XPATH, '//input[@id="secondpassword"]'
     Submit_Button = By.XPATH, "//button[@id='submitbtn']"
+    imageUpload = By.ID, 'imagesrc'

@@ -26,6 +26,8 @@ class RegisterTest(Base_Test):
         time.sleep(2)
         rp.select_country(country_name="Bangladesh")
         time.sleep(2)
+        rp.image_upload()
+        time.sleep(5)
         # rp.enter_password(DATA.VALID_PASSWORD)
         # rp.enter_confirm_password(DATA.VALID_PASSWORD)
         # time.sleep(5)

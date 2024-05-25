@@ -1,3 +1,4 @@
+import os
 import time
 
 from selenium.webdriver import Keys
@@ -77,3 +78,11 @@ class RegisterPage(BasePage):
         # self.driver.find_ele(*self.Submit_Button).click()
         self.click_element(self.Submit_Button)
         time.sleep(5)
+
+    def image_upload(self):
+        directory = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", "images/nature.jpg"))
+        # self.enter_at(self.locator.imageUpload, "C:\\Users\\raiha\\Desktop\\Anika\\register-page\\images\\nature.jpg")
+        self.enter_at(self.locator.imageUpload, directory)
+
+
