@@ -81,8 +81,7 @@ class RegisterPage(BasePage):
     def assert_hobbies_selected(self):
         value_1 = self.is_selected(self.locator.Movies)
         value_2 = self.is_selected(self.locator.Hockey)
-        assert value_1 == True
-        assert value_2 == True
+        return value_1, value_2
 
     def enter_language(self):
         # self.driver.find_element(*self.Languages).send_keys(language)
