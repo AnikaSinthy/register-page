@@ -22,9 +22,9 @@ class RegisterTest(Base_Test):
         time.sleep(2)
         rp.enter_language()
         time.sleep(2)
-        rp.select_android()
+        rp.select_android(value=DATA.value)
         time.sleep(2)
-        rp.select_country(country_name="Bangladesh")
+        rp.select_country(country_name=DATA.country_name)
         time.sleep(2)
         rp.image_upload()
         time.sleep(5)
@@ -37,8 +37,8 @@ class RegisterTest(Base_Test):
 
     def test_invalid_register(self):
         rp = RegisterPage(self.driver)
-        rp.enter_fullname(DATA.VALID_FIRSTNAME)
-        rp.enter_fullname(DATA.INVALID_LASTNAME)
+        rp.enter_firstname(DATA.VALID_FIRSTNAME)
+        rp.enter_lastname(DATA.VALID_LASTNAME)
         rp.enter_address(DATA.VALID_ADDRESS)
         rp.enter_email(DATA.INVALID_EMAIL)
         rp.enter_phone(DATA.VALID_PHONE)
