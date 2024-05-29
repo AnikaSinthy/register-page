@@ -7,13 +7,23 @@ class Locators():
     Address = By.XPATH, "//textarea[@ng-model='Adress']"
     Emailaddress = By.XPATH, "//input[@type='email']"
     Phone = By.XPATH, "//input[@type='tel']"
-    # Gender =
-    # Hobbies =
-    Languages = By.XPATH, "//div[@class='ui-autocomplete-multiselect ui-state-default ui-widget']"
-    # Skills =
+    male = By.XPATH,"(//input[@name='radiooptions'])[1]"
+    female = By.XPATH,"(//input[@name='radiooptions'])[2]"
+    Cricket = By.ID,'checkbox1'
+    Movies = By.ID, 'checkbox2'
+    Hockey = By.ID, 'checkbox3'
+    languages = By.ID,'msdd'
+    English = By.XPATH,'//multi-select/div[2]/ul/li[8]'
+    languages_text = By.XPATH,'//label[contains(text(),"Languages")]'
+    skills = By.ID,'Skills'
     # Country =
-    # SelectCountry =
+    SelectCountry = By.XPATH,'//span[@class="dropdown-wrapper"]/..'
+    SearchCountry = By.XPATH,'//input[@class="select2-search__field"]'
+    Year = By.XPATH,'//select[@id="yearbox"]'
+    Month = By.XPATH,'//select[@ng-model="monthbox"]'
+    Date = By.XPATH,'//select[@id="daybox"]'
     # DateofBirth =
     Password = By.XPATH, '//input[@id="firstpassword"]'
     ConfirmPassword = By.XPATH, '//input[@id="secondpassword"]'
+    ImageUpload = By.XPATH,'//input[@id="imagesrc"]'
     Submit_Button = By.XPATH, "//button[@id='submitbtn']"
