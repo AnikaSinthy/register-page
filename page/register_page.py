@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import os.path
-=======
 import os
->>>>>>> c6360ebf875c481ff66c32776d75a37353b85531
 import time
 
 from selenium.webdriver import Keys
@@ -46,7 +42,6 @@ class RegisterPage(BasePage):
         print(value)
         return value
 
-<<<<<<< HEAD
     def select_gender_female(self):
         self.click_element(self.locator.female)
 
@@ -69,7 +64,7 @@ class RegisterPage(BasePage):
     def assert_movies_selected(self):
         value = self.is_selected(self.locator.Movies)
         print(value)
-        return (value)
+        return value
 
     def select_hobbies_hockey(self):
         self.click_element(self.locator.Hockey)
@@ -95,10 +90,10 @@ class RegisterPage(BasePage):
         self.click_element(self.locator.English)
         self.click_element(self.locator.languages_text)
 
-    def select_android(self):
+    def select_android(self, value):
         self.selected_by_value(self.locator.skills, value)
 
-    def select_country(self):
+    def select_country(self, country_name):
         self.click_element(self.locator.SelectCountry)
         self.enter_at(self.locator.SearchCountry, country_name)
         self.enter_at(self.locator.SearchCountry, Keys.ENTER)
@@ -122,55 +117,11 @@ class RegisterPage(BasePage):
 
     def image_upload(self):
         directory = os.path.abspath(
-            os.path.join(os.path.dirname(__file__),"..","image/Screenshot 2024-04-27 231325.png"))
-        self.enter_at(self.locator.ImageUpload,directory)
+            os.path.join(os.path.dirname(__file__), "..", "image/Screenshot 2024-04-27 231325.png"))
+        self.enter_at(self.locator.ImageUpload, directory)
 
     def click_on_submit_button(self):
         # self.driver.find_ele(*self.Submit_Button).click()
         self.click_element(self.locator.Submit_Button)
-=======
-    def select_hobbies(self):
-        self.click_element(self.locator.cricket)
-        time.sleep(1)
-        self.click_element(self.locator.movies)
-
-    def enter_language(self):
-        self.click_element(self.locator.languages)
-        time.sleep(1)
-        self.click_element(self.locator.arabic)
-        time.sleep(1)
-        self.click_element(self.locator.languageText)
-
-    def select_android(self):
-        # self.select_by_value(self.locator.skills, "Android")
-        # self.select_by_text(self.locator.skills, "Adobe Photoshop")
-        self.select_by_index(self.locator.skills, 8)
-
-    def select_country(self, country_name):
-        self.click_element(self.locator.selectCountry)
-        time.sleep(1)
-        self.enter_at(self.locator.searchTextBox, country_name)
-        time.sleep(1)
-        self.enter_at(self.locator.searchTextBox, Keys.ENTER)
-
-    def enter_password(self, password):
-        # self.driver.find_element(*self.Password).send_keys(password)
-        self.enter_at(self.Password, password)
-
-    def enter_confirm_password(self, password):
-        # self.driver.find_element(*self.Password).send_keys(password)
-        self.enter_at(self.Password, password)
-
-    def click_on_submit_button(self):
-        # self.driver.find_ele(*self.Submit_Button).click()
-        self.click_element(self.Submit_Button)
->>>>>>> c6360ebf875c481ff66c32776d75a37353b85531
         time.sleep(5)
-
-    def image_upload(self):
-        directory = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..", "images/nature.jpg"))
-        # self.enter_at(self.locator.imageUpload, "C:\\Users\\raiha\\Desktop\\Anika\\register-page\\images\\nature.jpg")
-        self.enter_at(self.locator.imageUpload, directory)
-
 
