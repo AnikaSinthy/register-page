@@ -18,6 +18,7 @@ class BasePage():
     def is_selected(self, locator):
         return self.get_element(locator).is_selected()
 
+<<<<<<< HEAD
     def selected_by_value(self, locator, value):
         select = Slect(self.get_element(locator))
         select.select_by_value(value)
@@ -31,3 +32,16 @@ class BasePage():
         select.select_by_index(index)
 
 
+=======
+    def select_by_value(self, locator, value):
+        select = Select(self.get_element(locator))
+        select.select_by_value(value)
+
+    def select_by_text(self, locator, value):
+        select = Select(self.get_element(locator))
+        select.select_by_visible_text(value)
+
+    def select_by_index(self, locator, index):
+        select = Select(self.get_element(locator))
+        select.select_by_index(index)
+>>>>>>> c6360ebf875c481ff66c32776d75a37353b85531

@@ -14,6 +14,7 @@ class RegisterTest(Base_Test):
         rp.enter_address(DATA.VALID_ADDRESS)
         rp.enter_email(DATA.VALID_EMAIL)
         rp.enter_phone(DATA.VALID_PHONE)
+<<<<<<< HEAD
         rp.select_gender_female()
         assert rp.assert_female_selected() == True
         rp.select_hobbies_hockey()
@@ -30,6 +31,26 @@ class RegisterTest(Base_Test):
         rp.enter_confirm_password(DATA.VALID_PASSWORD)
         rp.image_upload()
         rp.click_on_submit_button()
+=======
+        time.sleep(2)
+        rp.select_gender_male()
+        time.sleep(1)
+        assert rp.assert_male_selected() == True
+        rp.select_hobbies()
+        time.sleep(2)
+        rp.enter_language()
+        time.sleep(2)
+        rp.select_android()
+        time.sleep(2)
+        rp.select_country(country_name="Bangladesh")
+        time.sleep(2)
+        rp.image_upload()
+        time.sleep(5)
+        # rp.enter_password(DATA.VALID_PASSWORD)
+        # rp.enter_confirm_password(DATA.VALID_PASSWORD)
+        # time.sleep(5)
+        # rp.click_on_submit_button()
+>>>>>>> c6360ebf875c481ff66c32776d75a37353b85531
 
         print("I am running from test_invalid_login method")
 
