@@ -29,7 +29,7 @@ class RegisterTest(Base_Test):
         rp.enter_password(DATA.VALID_PASSWORD)
         rp.enter_confirm_password(DATA.VALID_PASSWORD)
         rp.image_upload()
-        # rp.click_on_submit_button()
+        rp.click_on_submit_button()
 
         print("I am running from test_invalid_login method")
 
